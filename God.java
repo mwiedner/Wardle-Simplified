@@ -1,3 +1,5 @@
+// This is a project purely for fun. No rights reserved. I lay no claim to the Smite content discussed. I did write the code below though :D
+
 public class God {
 
     // Data members
