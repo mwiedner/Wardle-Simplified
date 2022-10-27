@@ -259,6 +259,10 @@ public static final String ANSI_YELLOW = "\033[0;93m";
         GodPool.add(Yu_Huang);
         God Lancelot = new God("Lancelot", "Assassin", "Jungle", "Physical", "Melee", "Arthurian", "Europe", 121);
         GodPool.add(Lancelot);
+        God Ishtar = new God("Ishtar", "Hunter", "ADC", "Physical", "Ranged", "Babylonian", "Europe", 122);
+        GodPool.add(Ishtar);
+        God Maui = new God("Maui", "Guardian", "Support", "Magical", "Melee", "Polynesian", "Asian", 123);
+        GodPool.add(Maui);
         
         LocalDate Today = LocalDate.now();
         		
@@ -379,6 +383,8 @@ public static final String ANSI_YELLOW = "\033[0;93m";
         }
         System.out.println();
         System.out.println("You have failed! The answer is: " + Wordle.getName() + ". Thanks for trying! Better luck next time!");
+
+        scan.close();
     }
     
     // Method for finding a God object given their name
