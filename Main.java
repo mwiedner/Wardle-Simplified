@@ -263,6 +263,8 @@ public static final String ANSI_YELLOW = "\033[0;93m";
         GodPool.add(Ishtar);
         God Maui = new God("Maui", "Guardian", "Support", "Magical", "Melee", "Polynesian", "South America", 123);
         GodPool.add(Maui);
+        God Surtr = new God("Surtr", "Warrior", "Solo", "Physical", "Melee", "Norse", "Europe", 124);
+        GodPool.add(Surtr);
         
         LocalDate Today = LocalDate.now();
         		
