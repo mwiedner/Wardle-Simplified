@@ -241,9 +241,9 @@ public static final String ANSI_YELLOW = "\033[0;93m";
         GodPool.add(Tsukuyomi);
         God Danzaburo = new God("Danzaburo", "Hunter", "ADC", "Physical", "Ranged", "Japanese", "Asia", 112);
         GodPool.add(Danzaburo);
-        God Tiamat = new God("Tiamat", "Mage", "Mid", "Magical", "Both", "Babylonian", "Europe", 113);
+        God Tiamat = new God("Tiamat", "Mage", "Mid", "Magical", "Both", "Babylonian", "Eurasia", 113);
         GodPool.add(Tiamat);
-        God Gilgamesh = new God("Gilgamesh", "Warrior", "Solo", "Physical", "Melee", "Babylonian", "Europe", 114);
+        God Gilgamesh = new God("Gilgamesh", "Warrior", "Solo", "Physical", "Melee", "Babylonian", "Eurasia", 114);
         GodPool.add(Gilgamesh);
         God Morgan_Le_Fay = new God("Morgan Le Fay", "Mage", "Mid", "Magical", "Ranged", "Arthurian", "Europe", 115);
         GodPool.add(Morgan_Le_Fay);
@@ -259,7 +259,7 @@ public static final String ANSI_YELLOW = "\033[0;93m";
         GodPool.add(Yu_Huang);
         God Lancelot = new God("Lancelot", "Assassin", "Jungle", "Physical", "Melee", "Arthurian", "Europe", 121);
         GodPool.add(Lancelot);
-        God Ishtar = new God("Ishtar", "Hunter", "ADC", "Physical", "Ranged", "Babylonian", "Europe", 122);
+        God Ishtar = new God("Ishtar", "Hunter", "ADC", "Physical", "Ranged", "Babylonian", "Eurasia", 122);
         GodPool.add(Ishtar);
         God Maui = new God("Maui", "Guardian", "Support", "Magical", "Melee", "Polynesian", "South America", 123);
         GodPool.add(Maui);
@@ -296,6 +296,8 @@ public static final String ANSI_YELLOW = "\033[0;93m";
         God Wordle = GodPool.get(randomize);
         God yWordle = GodPool.get(yestrand);
         
+        Wordle = GodPool.get(119);
+
         System.out.println("");
         System.out.println("");
         System.out.println("");
@@ -363,6 +365,11 @@ public static final String ANSI_YELLOW = "\033[0;93m";
     			if (Guess.getPantheon().equals(Wordle.getPantheon())) {
         			System.out.print(ANSI_GREEN);
         		}
+                else if (Guess.getContinent().equals("Eurasia")) {
+                    if (Wordle.getContinent().equals("Asia") || Wordle.getContinent().equals("Europe")) {
+                        System.out.print(ANSI_YELLOW);
+                    }
+                }
     			else if (Guess.getContinent().equals(Wordle.getContinent())) {
     				System.out.print(ANSI_YELLOW);
     			}
