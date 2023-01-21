@@ -296,8 +296,6 @@ public static final String ANSI_YELLOW = "\033[0;93m";
         God Wordle = GodPool.get(randomize);
         God yWordle = GodPool.get(yestrand);
         
-        Wordle = GodPool.get(119);
-
         System.out.println("");
         System.out.println("");
         System.out.println("");
@@ -311,89 +309,90 @@ public static final String ANSI_YELLOW = "\033[0;93m";
     }
         
     public static void play(God Wordle, ArrayList<God> GodPool) {
-    	Scanner scan = new Scanner(System.in);
-        System.out.println("Let's begin!");
-        System.out.println("");
-        System.out.println("Enter your guesses:");
-        
-        for (int i = 1; i <= 5; i++) {
-       	 
-        	String guessString = scan.nextLine();
-        	
-        	guessString = guessString.replaceAll("\\s{2,}", " ").trim();
-        	
-        	guessString = (toTitleCase(guessString.toLowerCase()));
-        	
-        	if (guessString.equals("Morrigan")) {
-        		guessString = "The Morrigan";
-        	}
-        	
-        	// System.out.println(guessString);
-        	
-        	God Guess = findGod(guessString, GodPool);
-        	
-        	if (Guess == Wordle) {
-        		System.out.println("Correct! The god was " + Wordle.getName());
-        		return;
-        	}
-        	else if (Guess == null) {
-        		i = i-1;
-        	}
-        	
-        	else {
-        		System.out.print(Guess.getName() + " ==> ");
-        		if (Guess.getRole().equals(Wordle.getRole())) {
-        			System.out.print(ANSI_GREEN);
-        		}
-    			System.out.print(Guess.getRole() + ANSI_RESET + " / ");
-    			
-    			if (Guess.getConquest().equals(Wordle.getConquest())) {
-        			System.out.print(ANSI_GREEN);
-        		}
-    			System.out.print(Guess.getConquest() + ANSI_RESET + " / ");
-    			
-    			if (Guess.getDmg().equals(Wordle.getDmg())) {
-        			System.out.print(ANSI_GREEN);
-        		}
-    			System.out.print(Guess.getDmg() + ANSI_RESET + " / ");
-    			
-    			if (Guess.getAtt().equals(Wordle.getAtt()) || Wordle.getAtt().equals("Both")) {
-        			System.out.print(ANSI_GREEN);
-        		}
-    			System.out.print(Guess.getAtt() + ANSI_RESET + " / ");
-    			
-    			if (Guess.getPantheon().equals(Wordle.getPantheon())) {
-        			System.out.print(ANSI_GREEN);
-        		}
-                else if (Guess.getContinent().equals("Eurasia")) {
-                    if (Wordle.getContinent().equals("Asia") || Wordle.getContinent().equals("Europe")) {
-                        System.out.print(ANSI_YELLOW);
+    	try (Scanner scan = new Scanner(System.in)) {
+            System.out.println("Let's begin!");
+            System.out.println("");
+            System.out.println("Enter your guesses:");
+            
+            for (int i = 1; i <= 5; i++) {
+             
+            	String guessString = scan.nextLine();
+            	
+            	guessString = guessString.replaceAll("\\s{2,}", " ").trim();
+            	
+            	guessString = (toTitleCase(guessString.toLowerCase()));
+            	
+            	if (guessString.equals("Morrigan")) {
+            		guessString = "The Morrigan";
+            	}
+            	
+            	// System.out.println(guessString);
+            	
+            	God Guess = findGod(guessString, GodPool);
+            	
+            	if (Guess == Wordle) {
+            		System.out.println("Correct! The god was " + Wordle.getName());
+            		return;
+            	}
+            	else if (Guess == null) {
+            		i = i-1;
+            	}
+            	
+            	else {
+            		System.out.print(Guess.getName() + " ==> ");
+            		if (Guess.getRole().equals(Wordle.getRole())) {
+            			System.out.print(ANSI_GREEN);
+            		}
+            		System.out.print(Guess.getRole() + ANSI_RESET + " / ");
+            		
+            		if (Guess.getConquest().equals(Wordle.getConquest())) {
+            			System.out.print(ANSI_GREEN);
+            		}
+            		System.out.print(Guess.getConquest() + ANSI_RESET + " / ");
+            		
+            		if (Guess.getDmg().equals(Wordle.getDmg())) {
+            			System.out.print(ANSI_GREEN);
+            		}
+            		System.out.print(Guess.getDmg() + ANSI_RESET + " / ");
+            		
+            		if (Guess.getAtt().equals(Wordle.getAtt()) || Wordle.getAtt().equals("Both")) {
+            			System.out.print(ANSI_GREEN);
+            		}
+            		System.out.print(Guess.getAtt() + ANSI_RESET + " / ");
+            		
+            		if (Guess.getPantheon().equals(Wordle.getPantheon())) {
+            			System.out.print(ANSI_GREEN);
+            		}
+                    else if (Guess.getContinent().equals("Eurasia")) {
+                        if (Wordle.getContinent().equals("Asia") || Wordle.getContinent().equals("Europe")) {
+                            System.out.print(ANSI_YELLOW);
+                        }
                     }
-                }
-    			else if (Guess.getContinent().equals(Wordle.getContinent())) {
-    				System.out.print(ANSI_YELLOW);
-    			}
-    			System.out.print(Guess.getPantheon() + ANSI_RESET + " / ");
-    			
-    			if (Math.abs((Guess.getOrder() - Wordle.getOrder())) <= 10) {
-        			System.out.print(ANSI_YELLOW);
-        		}
-    			System.out.print(Guess.getOrder() + ANSI_RESET);
-    			if (Guess.getOrder() > Wordle.getOrder()) {
-    				System.out.print(" v");
-    			}
-    			else {
-    				System.out.print(" ^");
-    			}
-    			System.out.println();
-    			System.out.println("Guesses left: " + (5-i));
-    			System.out.println();
-        	}
-        }
-        System.out.println();
-        System.out.println("You have failed! The answer is: " + Wordle.getName() + ". Thanks for trying! Better luck next time!");
+            		else if (Guess.getContinent().equals(Wordle.getContinent())) {
+            			System.out.print(ANSI_YELLOW);
+            		}
+            		System.out.print(Guess.getPantheon() + ANSI_RESET + " / ");
+            		
+            		if (Math.abs((Guess.getOrder() - Wordle.getOrder())) <= 10) {
+            			System.out.print(ANSI_YELLOW);
+            		}
+            		System.out.print(Guess.getOrder() + ANSI_RESET);
+            		if (Guess.getOrder() > Wordle.getOrder()) {
+            			System.out.print(" v");
+            		}
+            		else {
+            			System.out.print(" ^");
+            		}
+            		System.out.println();
+            		System.out.println("Guesses left: " + (5-i));
+            		System.out.println();
+            	}
+            }
+            System.out.println();
+            System.out.println("You have failed! The answer is: " + Wordle.getName() + ". Thanks for trying! Better luck next time!");
 
-        scan.close();
+            scan.close();
+        }
     }
     
     // Method for finding a God object given their name
