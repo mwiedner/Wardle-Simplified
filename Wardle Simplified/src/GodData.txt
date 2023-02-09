@@ -1,1 +1,0 @@
-God Data is no longer stored as a local file. It is instead acquired from a Pastebin link: https://pastebin.com/raw/AKpzU5Bb
