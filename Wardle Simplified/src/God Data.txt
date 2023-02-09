@@ -1,0 +1,124 @@
+Agni,Mage,Mid,Magical,Ranged,Hindu,Asia
+Anubis,Mage,Mid,Magical,Ranged,Egyptian,Africa
+Arachne,Assassin,Jungle,Physical,Melee,Greek,Europe
+Artemis,Hunter,ADC,Physical,Ranged,Greek,Europe
+Bastet,Assassin,Jungle,Physical,Melee,Egyptian,Africa
+Hades,Mage,Mid,Magical,Ranged,Greek,Europe
+He Bo,Mage,Mid,Magical,Ranged,Chinese,Asia
+Hel,Mage,Mid,Magical,Ranged,Norse,Europe
+Hun Batz,Assassin,Jungle,Physical,Melee,Mayan,South America
+Kali,Assassin,Jungle,Physical,Melee,Hindu,Asia
+Kukulkan,Mage,Mid,Magical,Ranged,Mayan,South America
+Odin,Warrior,Solo,Physical,Melee,Norse,Europe
+Ra,Mage,Mid,Magical,Ranged,Egyptian,Africa
+Sobek,Guardian,Support,Magical,Melee,Egyptian,Africa
+Vamana,Warrior,Solo,Physical,Melee,Hindu,Asia
+Ymir,Guardian,Support,Magical,Melee,Norse,Europe
+Zeus,Mage,Mid,Magical,Ranged,Greek,Europe
+Guan Yu,Warrior,Solo,Physical,Melee,Chinese,Asia
+Bakasura,Assassin,Jungle,Physical,Melee,Hindu,Asia
+Anhur,Hunter,ADC,Physical,Ranged,Egyptian,Africa
+Cupid,Hunter,ADC,Physical,Ranged,Roman,Europe
+Thor,Assassin,Jungle,Physical,Melee,Norse,Europe
+Ares,Guardian,Support,Magical,Melee,Greek,Europe
+Freya,Mage,ADC,Magical,Melee,Norse,Europe
+Loki,Assassin,Jungle,Physical,Melee,Norse,Europe
+Bacchus,Guardian,Support,Magical,Melee,Roman,Europe
+Xbalanque,Hunter,ADC,Physical,Ranged,Mayan,South America
+Hercules,Warrior,Solo,Physical,Melee,Roman,Europe
+Vulcan,Mage,Mid,Magical,Ranged,Roman,Europe
+Neith,Hunter,ADC,Physical,Ranged,Egyptian,Africa
+Poseidon,Mage,Mid,Magical,Ranged,Greek,Europe
+Aphrodite,Mage,Mid,Magical,Ranged,Greek,Europe
+Apollo,Hunter,ADC,Physical,Ranged,Greek,Europe
+Ne Zha,Assassin,Jungle,Physical,Melee,Chinese,Asia
+Fenrir,Assassin,Jungle,Physical,Melee,Norse,Europe
+Eset,Mage,Mid,Magical,Ranged,Egyptian,Africa
+Athena,Guardian,Support,Magical,Melee,Greek,Europe
+Chronos,Mage,Mid,Magical,Ranged,Greek,Europe
+Chang'e,Mage,Mid,Magical,Ranged,Chinese,Asia
+Tyr,Warrior,Solo,Physical,Melee,Norse,Europe
+Zhong Kui,Mage,Mid,Magical,Ranged,Chinese,Asia
+Thanatos,Assassin,Jungle,Physical,Melee,Greek,Europe
+Mercury,Assassin,Jungle,Physical,Melee,Roman,Europe
+Sun Wukong,Warrior,Solo,Physical,Melee,Chinese,Asia
+Ah Muzen Cab,Hunter,ADC,Physical,Ranged,Mayan,South America
+Nu Wa,Mage,Mid,Magical,Ranged,Chinese,Asia
+Chaac,Warrior,Solo,Physical,Melee,Mayan,South America
+Geb,Guardian,Support,Magical,Melee,Egyptian,Africa
+Nemesis,Assassin,Jungle,Physical,Melee,Greek,Europe
+Scylla,Mage,Mid,Magical,Ranged,Greek,Europe
+Ullr,Hunter,ADC,Physical,Ranged,Norse,Europe
+Kumbhakarna,Guardian,Support,Magical,Melee,Hindu,Asia
+Osiris,Warrior,Solo,Physical,Melee,Egyptian,Africa
+Janus,Mage,Mid,Magical,Ranged,Roman,Europe
+Rama,Hunter,ADC,Physical,Ranged,Hindu,Asia
+Serqet,Assassin,Jungle,Physical,Melee,Egyptian,Africa
+Cabrakan,Guardian,Jungle,Magical,Melee,Mayan,South America
+Sylvanus,Guardian,Support,Magical,Ranged,Roman,Europe
+Nox,Mage,Mid,Magical,Ranged,Roman,Europe
+Ao Kuang,Mage,Jungle,Magical,Melee,Chinese,Asia
+Awilix,Assassin,Jungle,Physical,Melee,Mayan,South America
+Hou Yi,Hunter,ADC,Physical,Ranged,Chinese,Asia
+Bellona,Warrior,Solo,Physical,Melee,Roman,Europe
+Medusa,Hunter,ADC,Physical,Ranged,Greek,Europe
+Ah Puch,Mage,Mid,Magical,Ranged,Mayan,South America
+Ratatoskr,Assassin,Jungle,Physical,Melee,Norse,Europe
+Ravana,Assassin,Jungle,Physical,Melee,Hindu,Asia
+Khepri,Guardian,Support,Magical,Melee,Egyptian,Africa
+Xing Tian,Guardian,Support,Magical,Melee,Chinese,Asia
+Sol,Mage,ADC,Magical,Ranged,Norse,Europe
+Chiron,Hunter,ADC,Physical,Ranged,Greek,Europe
+Amaterasu,Warrior,Solo,Physical,Melee,Japanese,Asia
+Raijin,Mage,Mid,Magical,Ranged,Japanese,Asia
+Skadi,Hunter,ADC,Physical,Ranged,Norse,Europe
+Jing Wei,Hunter,ADC,Physical,Ranged,Chinese,Asia
+Susano,Assassin,Jungle,Physical,Melee,Japanese,Asia
+Fafnir,Guardian,Support,Magical,Melee,Norse,Europe
+Erlang Shen,Warrior,Jungle,Physical,Melee,Chinese,Asia
+Terra,Guardian,Support,Magical,Melee,Roman,Europe
+Izanami,Hunter,ADC,Physical,Ranged,Japanese,Asia
+Camazotz,Assassin,Jungle,Physical,Melee,Mayan,South America
+Thoth,Mage,Mid,Magical,Ranged,Egyptian,Africa
+Nike,Warrior,Solo,Physical,Melee,Greek,Europe
+The Morrigan,Mage,Mid,Magical,Ranged,Celtic,Europe
+Kuzenbo,Guardian,Support,Magical,Melee,Japanese,Asia
+Cernunnos,Hunter,ADC,Physical,Ranged,Celtic,Europe
+Ganesha,Guardian,Support,Magical,Melee,Hindu,Asia
+Da Ji,Assassin,Jungle,Physical,Melee,Chinese,Asia
+Cu Chulainn,Warrior,Solo,Physical,Melee,Celtic,Europe
+Artio,Guardian,Solo,Magical,Melee,Celtic,Europe
+Hachiman,Hunter,ADC,Physical,Ranged,Japanese,Asia
+Discordia,Mage,Mid,Magical,Ranged,Roman,Europe
+Cerberus,Guardian,Solo,Magical,Melee,Greek,Europe
+Achilles,Warrior,Solo,Physical,Melee,Greek,Europe
+Chernobog,Hunter,ADC,Physical,Ranged,Slavic,Europe
+Baron Samedi,Mage,Mid,Magical,Ranged,Voodoo,Africa
+Pele,Assassin,Jungle,Physical,Melee,Polynesian,South America
+Hera,Mage,Mid,Magical,Ranged,Greek,Europe
+King Arthur,Warrior,Solo,Physical,Melee,Arthurian,Europe
+Merlin,Mage,Mid,Magical,Ranged,Arthurian,Europe
+Jormungandr,Guardian,Solo,Magical,Ranged,Norse,Europe
+Horus,Warrior,Solo,Physical,Melee,Egyptian,Africa
+Set,Assassin,Jungle,Physical,Melee,Egyptian,Africa
+Olorun,Mage,ADC,Magical,Ranged,Yoruba,Africa
+Persephone,Mage,Mid,Magical,Ranged,Greek,Europe
+Yemoja,Guardian,Support,Magical,Ranged,Yoruba,Africa
+Heimdallr,Hunter,ADC,Physical,Ranged,Norse,Europe
+Mulan,Warrior,Solo,Physical,Melee,Chinese,Asia
+Baba Yaga,Mage,Mid,Magical,Ranged,Slavic,Europe
+Cthulhu,Guardian,Solo,Magical,Melee,OldOnes,None
+Tsukuyomi,Assassin,Jungle,Physical,Melee,Japanese,Asia
+Danzaburo,Hunter,ADC,Physical,Ranged,Japanese,Asia
+Tiamat,Mage,Mid,Magical,Both,Babylonian,Eurasia
+Gilgamesh,Warrior,Solo,Physical,Melee,Babylonian,Eurasia
+Morgan Le Fay,Mage,Mid,Magical,Ranged,Arthurian,Europe
+Charybdis,Hunter,ADC,Physical,Ranged,Greek,Europe
+Cliodhna,Assassin,Jungle,Physical,Melee,Celtic,Europe
+Atlas,Guardian,Support,Magical,Melee,Greek,Europe
+Shiva,Warrior,Solo,Physical,Melee,Hindu,Asia
+Yu Huang,Mage,Mid,Magical,Ranged,Chinese,Asia
+Lancelot,Assassin,Jungle,Physical,Melee,Arthurian,Europe
+Ishtar,Hunter,ADC,Physical,Ranged,Babylonian,Eurasia
+Maui,Guardian,Support,Magical,Melee,Polynesian,South America
+Surtr,Warrior,Solo,Physical,Melee,Norse,Europe
