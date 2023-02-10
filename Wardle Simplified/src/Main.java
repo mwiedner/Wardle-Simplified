@@ -1,6 +1,5 @@
 // This is a project purely for fun. No rights reserved. I lay no claim to the Smite content discussed. I did write the code below though :D
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.net.URL;
 import java.io.InputStreamReader;
@@ -19,22 +18,7 @@ public static final String ANSI_GREEN = "\u001B[32m";
 public static final String ANSI_YELLOW = "\033[0;93m";
   
     public static void main(String[] args) throws Exception {
-      
-    	ArrayList<God> GodPool = new ArrayList<God>(); // Create the God Pool
-    	
-        URL pastebinData = new URL("https://pastebin.com/raw/AKpzU5Bb");  // Create a URL object to access the data from Pastebin.com
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(pastebinData.openStream()));  // Use BufferedReader to read the data
-            String line;
-            int ReleaseNumber = 1; // Int to keep track of the line number/release order
-            while ((line = br.readLine()) != null) { // Loop through the data
-                String[] parts = line.split(","); // Parse the line by commas
-                God god = new God(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], ReleaseNumber); // Create the God objects
-                GodPool.add(god); // Add the God object to the God Pool
-                ReleaseNumber++;
-            }
-            br.close();
-        
         LocalDate Today = LocalDate.now();
         		
         int date = Integer.parseInt(Today.format(DateTimeFormatter.ofPattern("yyMMdd")));
@@ -58,12 +42,43 @@ public static final String ANSI_YELLOW = "\033[0;93m";
         else {
         	yesterday = date - 1;
         }
+    	
+        URL pastebinData = new URL("https://pastebin.com/raw/AKpzU5Bb");  // Create a URL object to access the data from Pastebin.com
         
-        int randomize = (int)Math.floor(randomGenerator(date) * 1000000 * 100000 % GodPool.size()); // Get a random int with today's date as the seed
-        int yestrand = (int)Math.floor(randomGenerator(yesterday) * 1000000 * 100000 % GodPool.size()); // Random int with yesterday as seed
-        
-        God Wordle = GodPool.get(randomize);
-        God yWordle = GodPool.get(yestrand);
+        int numGods = 0; // Instantiate an int for keeping track of the number of lines on the document, which is the number of Gods
+
+        BufferedReader lineCounter = new BufferedReader(new InputStreamReader(pastebinData.openStream()));  // Use BufferedReader to count lines
+        while (lineCounter.readLine() != null) {
+            numGods++;
+        }
+
+        int randomize = (int)Math.floor(randomGenerator(date) * 1000000 * 100000 % numGods); // Get a random int with today's date as the seed
+        int yestrand = (int)Math.floor(randomGenerator(yesterday) * 1000000 * 100000 % numGods); // Random int with yesterday as seed
+
+        HashMap<String, God> GodPool = new HashMap<String, God>(); // Create the God Pool HashMap
+
+        // Instantiate the Wordle and yWordle variables to hold today's answer and yesterday's answer respectively
+        God Wordle = new God(null, null, null, null, null, null, null, 0);
+        God yWordle = new God(null, null, null, null, null, null, null, 0);
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(pastebinData.openStream()));  // Use BufferedReader to read the data
+            String line;
+            int ReleaseNumber = 1; // Int to keep track of the line number/release order
+            while ((line = br.readLine()) != null) { // Loop through the data
+                String[] parts = line.split(","); // Parse the line by commas
+                God god = new God(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], ReleaseNumber); // Create the God objects
+                GodPool.put(parts[0], god); // Add the God object to the God Pool HashMap
+
+                if (ReleaseNumber == randomize) {
+                    Wordle = god;
+                }
+                else if (ReleaseNumber == yestrand) {
+                    yWordle = god;
+                }
+
+                ReleaseNumber++;
+            }
+            br.close();
         
         System.out.println("");
         System.out.println("");
@@ -77,7 +92,7 @@ public static final String ANSI_YELLOW = "\033[0;93m";
         play(Wordle, GodPool);
     }
         
-    public static void play(God Wordle, ArrayList<God> GodPool) { // Method for playing the game
+    public static void play(God Wordle, HashMap<String, God> GodPool) { // Method for playing the game
     	try (Scanner scan = new Scanner(System.in)) {
             System.out.println("Let's begin!");
             System.out.println("");
@@ -96,13 +111,14 @@ public static final String ANSI_YELLOW = "\033[0;93m";
             		guessString = "The Morrigan";
             	}
             	
-            	God Guess = findGod(guessString, GodPool); // Get the God object from the name
-            	
+                God Guess = GodPool.get(guessString); // Find the God variable based on the name the user guessed
+                
             	if (Guess == Wordle) {
             		System.out.println("Correct! The god was " + Wordle.getName());
             		return;
             	}
-            	else if (Guess == null) {
+                else if (Guess == null) {
+                    System.out.println("That is not the name of a god. Please try again.");
             		i = i-1;
             	}
             	
@@ -162,18 +178,6 @@ public static final String ANSI_YELLOW = "\033[0;93m";
 
             scan.close();
         }
-    }
-    
-    // Method for finding a God object given their name
-    public static God findGod(String s, ArrayList<God> g) {
-    	
-    	for (int i = 0; i < g.size(); i++) {
-    		if (s.equals(g.get(i).getName())) {
-    			return g.get(i);
-    		}
-    	}
-    	System.out.println("Invalid input. Please try again.");
-		return null;
     }
     
     public static double randomGenerator(long seed) {
